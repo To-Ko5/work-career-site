@@ -6,6 +6,7 @@
   },
   "rules": {
     "linebreak-style": "off",
-    "quotes": ["error", "shingle"]
+    "semi": ["off"],
+    "comma-dangle": ["off"]
   }
 }
