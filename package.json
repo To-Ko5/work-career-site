@@ -11,11 +11,13 @@
     "format": "prettier --write '.js,.jsx,.ts,.tsx,.json' ."
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^9.4.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "date-fns": "^3.6.0",
     "lucide-react": "^0.365.0",
     "newt-client-js": "^3.3.1",
     "next": "14.1.4",
