@@ -1,9 +1,13 @@
-const About = () => {
+type Props = {
+  content: string
+}
+
+const About = ({ content }: Props) => {
   return (
     <section>
       <h2 className="text-xl font-bold mb-2">About</h2>
       <p className="whitespace-pre-line text-muted-foreground print:text-sm">
-        {about.content}
+        {content}
       </p>
     </section>
   )
