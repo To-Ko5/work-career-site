@@ -1,8 +1,13 @@
 import { urlLinks } from '@/data/site-data'
 import React from 'react'
 import ExternalLinkArea from '@/components/original/external-link-area'
+import { about } from '@/types/data'
 
-const Profile = () => {
+type Props = {
+  profile: about
+}
+
+const Profile = ({ profile }: Props) => {
   return (
     <section>
       <div className="flex flex-col sm:flex-row gap-4">
