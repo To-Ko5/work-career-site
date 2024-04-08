@@ -10,11 +10,6 @@ export const metadata: Metadata = {
   description: site.description
 }
 
-type Layout = {
-  children: React.ReactNode
-  modal: React.ReactNode
-}
-
 export default function RootLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
