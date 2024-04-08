@@ -19,7 +19,7 @@ export type about = {
 }
 
 export type url_link = {
-  icon: LucideIcon | IconType
+  icon: LucideIcon | IconType | any
   href: string
   tooltip?: string
 }
