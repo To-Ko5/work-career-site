@@ -2,6 +2,7 @@ import { urlLinks } from '@/data/site-data'
 import React from 'react'
 import ExternalLinkArea from '@/components/original/external-link-area'
 import { about } from '@/types/data'
+import Image from 'next/image'
 
 type Props = {
   profile: about
@@ -12,10 +13,13 @@ const Profile = ({ profile }: Props) => {
     <section>
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="max-w-[100px]">
-          <picture>
-            <source srcSet="https://placehold.jp/500x500.png" />
-            <img src="https://placehold.jp/500x500.png" alt="profile" />
-          </picture>
+          <Image
+            width={100}
+            height={100}
+            className="bg-muted/30 w-100"
+            src="/icon.jpg"
+            alt="profile"
+          />
         </div>
         <div>
           <div className="mb-2">
