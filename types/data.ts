@@ -1,4 +1,5 @@
 import { LucideIcon } from 'lucide-react'
+import { IconType } from '@icons-pack/react-simple-icons'
 
 export type work = {
   case: number
@@ -18,7 +19,7 @@ export type about = {
 }
 
 export type url_link = {
-  icon: LucideIcon
+  icon: LucideIcon | IconType
   href: string
   tooltip?: string
 }
