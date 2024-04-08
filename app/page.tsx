@@ -2,12 +2,13 @@ import About from '@/components/original/about'
 import Date from '@/components/original/date'
 import Profile from '@/components/original/profile'
 import Works from '@/components/original/works'
+import { site } from '@/data/site-data'
 import { getAbout, getWorkList } from '@/lib/newt'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Newt・Next.jsブログ',
-  description: 'NewtとNext.jsを利用したブログです'
+  title: site.metaTitle,
+  description: site.description
 }
 
 export default async function Home() {
