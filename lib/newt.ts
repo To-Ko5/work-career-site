@@ -41,3 +41,12 @@ export const getAbout = async () => {
   })
   return items[0]
 }
+
+export const getSkillList = async () => {
+  const { items } = await client.getContents<any>({
+    appUid: 'document-site',
+    modelUid: 'skill'
+  })
+  const skills = items[0].skill as string[]
+  return skills
+}
