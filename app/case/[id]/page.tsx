@@ -14,10 +14,6 @@ type Props = {
 
 export async function generateStaticParams() {
   const works = await getWorkList()
-  if (!works || works.length === 0) {
-    return [{ params: 'not-found' }]
-  }
-
   return works.map((work) => ({
     params: Number(work.case)
   }))
