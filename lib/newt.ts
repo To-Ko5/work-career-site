@@ -12,7 +12,7 @@ const client = createClient({
 export const getWorkList = cache(async () => {
   const { items } = await client.getContents<work>({
     appUid: 'document-site',
-    modelUid: 'work',
+    modelUid: 'work2',
     query: {
       order: ['case']
     }
@@ -24,7 +24,9 @@ export const getWorkDetail = cache(async (id: string) => {
   const items = await client.getFirstContent<work>({
     appUid: 'document-site',
     modelUid: 'work',
-    query: {}
+    query: {
+      case: id
+    }
   })
   return items
 })
