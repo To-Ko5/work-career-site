@@ -6,9 +6,8 @@ import {
   PaginationNext,
   PaginationPrevious
 } from '@/components/ui/pagination'
-import { works } from '@/data/data'
 import { useParams } from 'next/navigation'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback } from 'react'
 
 const WorkPagination = () => {
   const params = useParams()
@@ -19,7 +18,7 @@ const WorkPagination = () => {
   }, [paramsId])
 
   const checkEndPage = useCallback(() => {
-    return paramsId === works.length
+    return paramsId === 4
   }, [paramsId])
 
   return (
