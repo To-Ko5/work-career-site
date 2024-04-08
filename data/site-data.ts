@@ -4,7 +4,8 @@ import type { url_link } from '@/types/data'
 
 export const site = {
   title: 'Portfolio',
-  description: 'TK Portfolio Site'
+  description: 'TK Portfolio Site',
+  metaTitle: 'TK Portfolio'
 }
 
 export const date = {
