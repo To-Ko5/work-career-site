@@ -1,3 +1,4 @@
+import WorkDescription from '@/components/original/work-description'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { work } from '@/types/data'
@@ -23,11 +24,11 @@ const Work = ({ work, isLink = true }: Props) => {
           scroll={false}
           href={`/case/${work.case}`}
         >
-          {work.project}
+          {work.title}
         </Link>
       )
     } else {
-      return <div className="text-xl">{work.project}</div>
+      return <div className="text-xl">{work.title}</div>
     }
   }, [work, isLink])
 
@@ -36,14 +37,14 @@ const Work = ({ work, isLink = true }: Props) => {
       <Card className="print:shadow-none">
         <CardHeader>
           <div className="text-sm text-right tabular-nums text-muted-foreground sm:hidden mb-3">
-            {dateFormat(work.date.start)} - {dateFormat(work.date.end)}
+            {dateFormat(work.startDate)} - {dateFormat(work.endDate)}
           </div>
           <div className="flex items-center justify-between gap-x-2">
             <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none mb-2">
               {setTitle()}
             </h3>
             <div className="text-sm tabular-nums text-muted-foreground hidden sm:block">
-              {dateFormat(work.date.start)} - {dateFormat(work.date.end)}
+              {dateFormat(work.startDate)} - {dateFormat(work.endDate)}
             </div>
           </div>
           <div className="flex gap-2 flex-wrap">
@@ -84,14 +85,7 @@ const Work = ({ work, isLink = true }: Props) => {
         </CardContent>
 
         <CardContent className="text-sm text-muted-foreground whitespace-pre-line">
-          <div className="mb-3">{work.description.text}</div>
-          {work.description.list && (
-            <ul className="list-disc pl-4">
-              {work.description.list.map((listText, index) => {
-                return <li key={index}>{listText}</li>
-              })}
-            </ul>
-          )}
+          <WorkDescription content={work.description || ''} />
         </CardContent>
       </Card>
     </section>
