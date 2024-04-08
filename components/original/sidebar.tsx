@@ -8,7 +8,6 @@ import {
   SheetTitle,
   SheetTrigger
 } from '@/components/ui/sheet'
-import { works } from '@/data/data'
 import { MenuIcon, MoreHorizontalIcon } from 'lucide-react'
 import Link from 'next/link'
 
@@ -22,7 +21,7 @@ const Sidebar = () => {
         </Button>
       </SheetTrigger>
       <SheetContent side={'left'}>
-        {works.map((work) => {
+        {/* {works.map((work) => {
           return (
             <SheetHeader className="mb-4" key={work.case}>
               <SheetTitle className="text-md">
@@ -48,7 +47,7 @@ const Sidebar = () => {
               </div>
             </SheetHeader>
           )
-        })}
+        })} */}
       </SheetContent>
     </Sheet>
   )
