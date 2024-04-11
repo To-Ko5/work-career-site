@@ -12,7 +12,7 @@ const Skills = ({ skills }: Props) => {
   return (
     <div>
       <h2 className="text-xl font-bold mb-4">Skills</h2>
-      <div className="flex gap-2 flex-wrap mb-2">
+      <div className="flex gap-2 flex-wrap mb-2 text-muted-foreground text-sm">
         {firstChunk.map((skill, index) => {
           return (
             <div key={index} className={cn('border', 'p-2', 'rounded-md')}>
@@ -22,7 +22,7 @@ const Skills = ({ skills }: Props) => {
         })}
       </div>
 
-      <div className="flex gap-2 flex-wrap mb-2">
+      <div className="flex gap-2 flex-wrap mb-2 text-muted-foreground text-sm">
         {secondChunk.map((skill, index) => {
           return (
             <div key={index} className={cn('border', 'p-2', 'rounded-md')}>
@@ -32,7 +32,7 @@ const Skills = ({ skills }: Props) => {
         })}
       </div>
 
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex gap-2 flex-wrap text-muted-foreground text-sm">
         {thirdChunk.map((skill, index) => {
           return (
             <div key={index} className={cn('border', 'p-2', 'rounded-md')}>
